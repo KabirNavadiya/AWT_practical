@@ -116,7 +116,7 @@ function greet(name = 'Anonymous') {
   }
   
   greet(); // Output: Hello, Anonymous
-  greet('kabir'); // Output: Hello, John
+  greet('kabir'); // Output: Hello, kabir
   
 
   //function rest parameters 
