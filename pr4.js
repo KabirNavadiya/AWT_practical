@@ -1,4 +1,4 @@
-function calculateFactorial(number) {
+function Factorial(number) {
     //(accessible within the entire function)
     let globalVariable = "global variable";
   
@@ -24,7 +24,7 @@ function calculateFactorial(number) {
     return result;
   }
   
-  const numberToCalculate = 5;
-  const factorialResult = calculateFactorial(numberToCalculate);
-  console.log(`Factorial of ${numberToCalculate} is: ${factorialResult}`);
+  const num = 5;
+  const Result = Factorial(num);
+  console.log(`Factorial of ${num} is: ${Result}`);
   
