@@ -71,7 +71,7 @@ mySet.add(5.5);
 mySet.add("kabir"); 
 
 
-console.log(mySet1);
+console.log(mySet);
 
 //classes 
 console.log("\nclasses ");
