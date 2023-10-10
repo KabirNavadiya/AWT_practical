@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+<style>
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+  }
+  
+  form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input {
+    width: 200px;
+    padding: 5px;
+  }
+</style>
+</head>
+<body>
+    <form action="/display" method="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+        <label for="course">Course</label>
+        <select name="course" id="course">
+          <option value="1">Introduction to Computer Science</option>
+          <option value="2">Data Structures and Algorithms</option>
+          <option value="3">Object-Oriented Programming</option>
+          <option value="4">Software Engineering</option>
+        </select>
+        <label for="semester">Semester</label>
+        <select name="semester" id="semester">
+          <option value="1">Fall</option>
+          <option value="2">Spring</option>
+          <option value="3">Summer</option>
+        </select>
+        <input type="submit" value="Register">
+      </form>
+    
+</body>
+</html>

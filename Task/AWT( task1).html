@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWT </title>
+
+
+  <style>
+      .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+
+Input1 : 
+<input type="text" id="input1"><br>
+
+input2 :
+<input type="text" id="input2"><br>
+<p id="Error" class="error"></p>
+<button onclick="add()">add</button>
+<button onclick="sub()">sub</button>
+<button onclick="mul()">mul</button>
+<button onclick="div()">div</button><br>
+
+
+<label id="msg"></label>
+
+<script>
+
+      function add(){
+        var num1=document.getElementById('input1').value;
+        var num2=document.getElementById('input2').value;
+        var Result = document.getElementById('msg');
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+        if (isNaN(num1) || isNaN(num2)){
+          document.getElementById('Error').innerHTML = '* Invalid input';
+        return;
+        }
+        var result;
+        result=num1 + num2
+        Result.textContent= 'Result: ' + result;
+      }
+        
+      function sub(){
+
+        var num1=document.getElementById('input1').value;
+        var num2=document.getElementById('input2').value;
+        var Result = document.getElementById('msg');
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+        if (isNaN(num1) || isNaN(num2)){
+
+          document.getElementById('Error').innerHTML = '* Invalid input';
+        return;
+        }
+        var result;
+        result=num1 - num2
+        Result.textContent= 'Result: ' + result;
+
+      }
+      function mul(){
+
+        var num1=document.getElementById('input1').value;
+        var num2=document.getElementById('input2').value;
+        var Result = document.getElementById('msg');
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+        if (isNaN(num1) || isNaN(num2)){
+
+          document.getElementById('Error').innerHTML = '* Invalid input';
+        return;
+        }
+        var result;
+        result=num1 * num2
+        Result.textContent= 'Result: ' + result;
+
+
+      }
+      function div(){
+
+        var num1=document.getElementById('input1').value;
+        var num2=document.getElementById('input2').value;
+        var Result = document.getElementById('msg');
+        num1 = parseInt(num1);
+        num2 = parseInt(num2);
+        if (isNaN(num1) || isNaN(num2)){
+          document.getElementById('Error').innerHTML = '* Invalid input';
+        return;
+        }
+        var result;
+        result=num1 / num2
+        Result.textContent= 'Result: ' + result;
+
+      }
+    
+
+    
+</script>
+  
+  
+</body>
+</html>

@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate table</title>
+</head>
+<body>
+    <input type="button" value="Genereate table" onclick="GenerateTable()">
+    <hr/>
+    <!-- <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table> -->
+    <div id="dvtable">
+
+    </div>
+    <script >
+        function GenerateTable() {
+            var customer = new Array();
+            customer.push(["customer id", "name", "country"]);
+            customer.push([1, "kabir", "australia"]);
+            customer.push([2, "bhautik", "india"]);
+            customer.push([3, "harsh", "india"]);
+            customer.push([4, "utsav", "germany"]);
+
+            // create table
+            var table =document.createElement("TABLE");
+            table.border ="3";
+
+            // get the count of columns.
+            var columnCount= customer[0].length;
+
+            // add the header row
+
+            var row = table.insertRow(-1);
+            for( var i=0;i<columnCount;i++){
+                var headerCell= document.createElement("TH");
+                headerCell.innerHTML = customer[0][1];
+                // <TH> customer ID </TH>
+                // <TH> Name</TH>
+                // <TH> country</TH>
+
+                row.appendChild(headerCell);
+            }
+            //add data rows to the table
+            for(var i=1;i<customer.length;i++){
+                row= table.insertRow();
+                 for(var j=0;j<columnCount;j++){
+                    var cell= row.insertCell();
+                    cell.innerHTML=customer[i][j];
+                 }
+            }
+            var dvtable=document.getElementById("dvtable");
+            dvtable.appendChild(table);
+            
+        }
+    </script>
+</body>
+</html>
